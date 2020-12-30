@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5d3123e5e3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <section id="section-1" class="hero-section">
+    <nav class="navbar">
+      <div class="navbar__container main-container">
+        <div class="logo-box">
+          <a href="#section-1" class="logo">
+           </i>RG</a>
+        </div>
+        <ul class="navbar__list">
+          <li class="navbar__list-item"><a href="#section-1">Section 1</a></li>
+          <li class="navbar__list-item"><a href="#section-2">Section 2</a></li>
+          <li class="navbar__list-item"><a href="#section-3">Section 3</a></li>
+          <!-- <li class="navbar__list-item"><a href="#section-4">Section 4</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="hero main-container">
+      <div class="hero__left">
+        <h1 class="hero__left-heading">Ruben Garcia</h1>
+        <p class="hero__left-subheading">Front-end React Developer based in Edinburgh, UK.<br>
+          HTML, CSS, Modern ES6 Javascript and React/Redux. Currently learning the MERN stack. </p>
+        <ul class="hero__left-social">
+          <li class="hero__left-social__item"><a href="#"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li class="hero__left-social__item"><a href="#"><i class="fab fa-github"></i></a></li>
+          <li class="hero__left-social__item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <a href="" class="btn btn-primary hero__left-btn">Contact Me</a>
+      </div>
+      <div class="hero__right">
+        <img src="<%= require('../img/newprofilepic.jpg')%>" alt=""
+          class="hero__right-img">
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="item">
+        <i class="devicon-javascript-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-html5-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-css3-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-sass-original colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-javascript-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-react-original colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-redux-original colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-webpack-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-nodejs-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-babel-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-git-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-visualstudio-plain colored"></i>
+      </div>
+      <div class="item">
+        <i class="devicon-materialui-plain colored"></i>
+      </div>
+    </div>
+
+  </section>
+  <section id="section-2" class="section-about">
+    <div class="about main-container">
+      <div class="about__left">
+        <img src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="">
+      </div>
+      <div class="about__right">
+        <h3 class="about__right-heading">About Me</h3>
+        <p class="about__right-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae commodi placeat ad
+          dolor ullam saepe aliquid officiis porro, deleniti laboriosam voluptate aperiam recusandae illo voluptas
+          mollitia provident aut eius sunt! Voluptate nihil amet dignissimos.</p>
+        <p class="about__right-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime sit veniam
+          laborum quos rem dolor, adipisci vel culpa molestias. Consequuntur velit sapiente officia! Error nobis
+          facilis.</p>
+
+      </div>
+    </div>
+  </section>
+  <section id="section-3" class="section-contact">
+    <div class="contact main-container shadow-s">
+      <div class="contact__left">
+        <h3 class="contact__left-heading">Let's get in touch</h3>
+        <p class="contact__left-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <ul class="contact__left-list">
+          <li class="contact__left-list__item"><i class="fas fa-envelope"></i>javiergarcia@gmail.com</li>
+          <li class="contact__left-list__item"><i class="fas fa-phone-alt"></i>07247 219 785</li>
+          <li class="contact__left-list__item"><i class="fas fa-map-marker-alt"></i>Edinburgh, UK</li>
+        </ul>
+        <ul class="contact__left-social">
+          <li class="contact__left-social__item"><a href="#"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li class="contact__left-social__item"><a href="#"><i class="fab fa-github"></i></a></li>
+          <li class="contact__left-social__item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="contact__right">
+        <form action="" class="contact__right-form">
+          <input type="text" placeholder="Name" class="contact__right-form__input">
+          <input type="email" placeholder="Email" class="contact__right-form__input">
+          <textarea name="" placeholder="Message" id="" cols="30" rows="10"
+            class="contact__right-form__textarea"></textarea>
+          <input type="submit" class="contact__right-form__btn btn btn-primary">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="floating">
+    <a href="#" class="floating__btn"><i class="fas fa-arrow-up floating__btn-icon"></i></a>
+  </div>
+
+</body>
+
+</html>
