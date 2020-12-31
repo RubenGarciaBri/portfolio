@@ -151,3 +151,5 @@ slider.addEventListener('mousemove', (e) => {
   console.log('sdsd', scrollLeft)
   console.log(slider.scrollLeft)
 });
+
+
