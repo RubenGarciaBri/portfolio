@@ -1,0 +1,68 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito Sans',
+    sans-serif;
+  line-height: 1.7;
+  color: #fff;
+  position: relative;
+  background: var(--color-bg);
+  opacity: 9;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-port) {
+    font-size: 56.25%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.6rem 4.8rem;
+  border-radius: 25rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+
+input,
+textarea {
+  outline: none;
+}
+
+.main-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+span {
+  white-space: nowrap;
+}

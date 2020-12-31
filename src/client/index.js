@@ -101,27 +101,44 @@ function goToTop(e) {
 
 //Slideshow
 
+
 const slider = document.querySelector('.slider');
+const sliderIcon = document.querySelectorAll('.slider-icon') 
+
 let isDown = false;
 let startX;
 let scrollLeft;
 
+// Slider event listeners
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
   slider.classList.add('active');
+  
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
   console.log("erreerre", scrollLeft)
 });
 
+slider.addEventListener('mouseover', () => {
+  sliderIcon.forEach((icon) => {
+    icon.classList.add('active');
+  })
+  
+});
+
 slider.addEventListener('mouseleave', () => {
   isDown = false;
   slider.classList.remove('active');
+  sliderIcon.forEach((icon) => {
+    icon.classList.remove('active');
+  })
+  
 });
 
 slider.addEventListener('mouseup', () => {
   isDown = false;
   slider.classList.remove('active');
+ 
 });
 
 slider.addEventListener('mousemove', (e) => {

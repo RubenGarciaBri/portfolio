@@ -1,0 +1,115 @@
+.section-contact {
+  padding: 10rem 0;
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &__left {
+      width: 60%;
+      padding: 5rem;
+      background-color: #fff;
+      color: var(--color-bg);
+      // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+      //   url('https://www.google.com/maps/d/u/0/thumbnail?mid=151ble9JQk6mBiqrd2huHrrrqdNc&hl=en');
+      // background-position: center;
+      // background-size: cover;
+      // background-repeat: no-repeat;
+
+      &-heading {
+        margin-bottom: .5rem;
+      }
+
+      &-subheading {
+        margin-bottom: 3rem;
+      }
+
+      &-list {
+        font-size: 1.8rem;
+        margin-bottom: 3.5rem;
+
+        &__item {
+          margin-bottom: .8rem;
+
+          & i {
+            margin-right: 1.7rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      &-social {
+        display: flex;
+
+        &__item {
+
+          & a {
+            font-size: 2.2rem;
+            padding: 0 1rem;
+            color: var(--color-bg);
+          }
+
+          &:not(:last-child) a {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    &__right {
+      width: 40%;
+      padding: 5rem;
+      background-color: var(--color-primary);
+
+      &-form {
+        width: 90%;
+        margin: 0 auto;
+        color: #fff;
+
+        &__input,
+        &__textarea {
+          font-size: 1.6rem;
+          color: inherit;
+          border-radius: 5px;
+          border: 2px solid #fff;
+          padding: 1.3rem 1.8rem;
+          background: var(--color-primary);
+        }
+
+        &__input::placeholder,
+        &__textarea::placeholder {
+          color: #fff;
+        }
+
+        &__input {
+          display: block;
+          width: 100%;
+          margin-bottom: 1.2rem;
+
+        }
+
+        &__textarea {
+          width: 100%;
+          font-size: 1.8rem;
+          resize: none;
+        }
+
+        &__btn {
+          border: 2px solid #fff;
+          width: 100%;
+          margin-top: 1rem;
+          cursor: pointer;
+          transition: .3s;
+
+          &:hover {
+            color: var(--color-primary);
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
