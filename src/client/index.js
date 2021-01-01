@@ -28,60 +28,6 @@ function goToSection(e) {
   })
 }
 
-//Change nav styles on scroll
-document.addEventListener('scroll', scrollNav);
-
-function scrollNav() {
-  //Media Query for Mobile
-  const query = window.matchMedia('(max-width: 56.25em)');
-
-  //Run different functions depending whether on Tab Portrait & Mobile or desktop
-  if (query.matches) {
-    //Navbar changes immediately after scrolling
-    scrollNavTabPort();
-  }
-  //Navbar changes after scrolling 100px
-  else {
-    scrollNavDesktop();
-  }
-
-  function scrollNavTabPort() {
-    if (window.scrollY > 0) {
-      navBar.classList.add('navbar--active');
-    } else {
-      navBar.classList.remove('navbar--active');
-    }
-  }
-
-  function scrollNavDesktop() {
-    if (window.scrollY > 100) {
-      navBar.classList.add('navbar--active');
-    } else {
-      navBar.classList.remove('navbar--active');
-    }
-  }
-
-}
-
-// Make nav links active on scroll
-window.addEventListener('scroll', switchNavLinks);
-
-function switchNavLinks() {
-  //Store how far the user has scrolled in a variable
-  const fromTop = window.scrollY;
-
-  //Loop through the anchors in the navbar and get each section through the hash property
-  navLinks.forEach(link => {
-    const section = document.querySelector(link.hash);
-  
-    //Change styling the the active class when the viewport reaches each section
-    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-}
 
 //Scrolls to the top on click
 logoLink.addEventListener('click', goToTop);
@@ -100,8 +46,6 @@ function goToTop(e) {
 }
 
 //Slideshow
-
-
 const slider = document.querySelector('.slider');
 const sliderIcon = document.querySelectorAll('.slider-icon') 
 
