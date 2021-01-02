@@ -15,12 +15,15 @@
       <div class="navbar__container main-container">
         <div class="logo-box">
           <a href="#section-1" class="logo">
-           </i>RG</a>
+            <i class="fas fa-code"></i></a>
         </div>
         <ul class="navbar__list">
           <li class="navbar__list-item"><a href="#section-2">About</a></li>
-          <li class="navbar__list-item"><a href="#section-3">Portfolio</a></li>
-          <li class="navbar__list-item"><a href="#section-4">Contact</a></li>
+          <li class="navbar__list-item"><a href="#section-3">Recommendations
+            
+          </a></li>
+          <li class="navbar__list-item"><a href="#section-4">Portfolio</a></li>
+          <li class="navbar__list-item"><a href="#section-5">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -28,19 +31,19 @@
       <div class="hero__left">
         <h1 class="hero__left-heading">Ruben Garcia</h1>
         <p class="hero__left-subheading">Front-end React Developer based in Edinburgh, UK.<br>
-          HTML, CSS, Modern ES6 Javascript and React/Redux. Currently learning the MERN stack. </p>
+          Proficient with HTML, CSS, Modern ES6 Javascript and React/Redux. Currently learning the MERN stack. </p>
         <ul class="hero__left-social">
           <li class="hero__left-social__item"><a href="#"><i class="fab fa-linkedin"></i></a>
           </li>
           <li class="hero__left-social__item"><a href="#"><i class="fab fa-github"></i></a></li>
           <li class="hero__left-social__item"><a href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>
-        <a href="" class="btn btn--primary hero__left-btn shadow-s">Contact Me</a>
-        <a href="" class="btn btn--secondary hero__left-btn shadow-s">See My Work</a>
+        <a href="#" class="btn btn--primary hero__left-btn shadow-s">Let's Talk</a>
+        <a href="#" class="btn btn--secondary hero__left-btn shadow-s">See My Work</a>
       </div>
       
     </div>
-    <img src="" class="hero-img">
+    <img src="<%= require('../img/prof2.png')%>" class="hero-img">
     
   </section>
   <section id="section-3" class="section-about">
@@ -90,29 +93,40 @@
 
     <div class="about main-container">
       <div class="about__left">
-        <img src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="">
+        <img src="<%= require('../img/3.png')%>" alt="">
       </div>
       <div class="about__right">
         <h3 class="about__right-heading">About Me</h3>
         <p class="about__right-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae commodi placeat ad
           dolor ullam saepe aliquid officiis porro, deleniti laboriosam voluptate aperiam recusandae illo voluptas
           mollitia provident aut eius sunt! Voluptate nihil amet dignissimos.</p>
-        <p class="about__right-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime sit veniam
+        <p class="about__right-text"><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime sit veniam
           laborum quos rem dolor, adipisci vel culpa molestias. Consequuntur velit sapiente officia! Error nobis
           facilis.</p>
       </div>
     </div>
+
+    <div class="about-banner">
+      <div class="testimonial main-container">
+        <i class="testimonial__icon fas fa-quote-left"></i>
+        <h3 class="testimonial__heading">Lynnette Gilfillian</h3>
+        <span class="testimonial__small">Aegon - Line Manager</span>
+        <p class="testimonial__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum possimus recusandae rem facere magni quisquam aliquid! Facilis earum, dignissimos sed quasi repellat odio hic.</p>
+      </div>
+    </div>
+
   </section>
   <section id="section-2" class="section-portfolio">
       <div class="section-title main-container">
-        <h2>Portfolio</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quasi nam laborum placeat! Facilis voluptatem vel repudiandae corporis aliquam perferendis.</p>
+        <h2 class="portfolio-heading">Portfolio</h2>
+        <p class="portfolio-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quasi nam laborum placeat! Facilis voluptatem vel repudiandae corporis aliquam perferendis.</p>
       </div>
       <div class="gallery main-container">
+        <h3 class="gallery-featured"><i class="gallery-icon fas fa-star"></i> Featured</h3>
         <div class="gallery-row">
-          <div class="gallery-card">
+          <div class="gallery-card" data-micromodal-trigger="modal-1">
             <div class="img-container">
-              <img src="https://joinyena.com/wp-content/uploads/2019/05/hubspot.jpg">
+              <img src="https://via.placeholder.com/600">
             </div>
             <div class="overlay">
               <div class="text">
@@ -121,9 +135,9 @@
               </div>           
             </div>
           </div>
-          <div class="gallery-card">
+          <div class="gallery-card gallery-card--alt">
             <div class="img-container">
-              <img src="https://joinyena.com/wp-content/uploads/2020/12/Screenshot-14.png">
+              <img src="https://via.placeholder.com/600">
             </div>
             <div class="overlay">
               <div class="text">
@@ -134,7 +148,7 @@
           </div>
           <div class="gallery-card">
             <div class="img-container">
-              <img src="https://joinyena.com/wp-content/uploads/2020/10/saupload_Twilio-4.jpg">
+              <img src="https://via.placeholder.com/600">
             </div>
             <div class="overlay">
               <div class="text">
@@ -180,6 +194,53 @@
 
   <div class="floating">
     <a href="#" class="floating__btn"><i class="fas fa-arrow-up floating__btn-icon"></i></a>
+  </div>
+
+  
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container shadow-s" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <div class="modal__left">
+            <img src="https://via.placeholder.com/480x720" class="modal__left-img shadow-s">
+          </div>
+          <div class="modal__right">
+            <a href="#" class="modal__btn modal__btn--site shadow-xs">View Site <i class="fas fa-chevron-right"></i></a></a>
+            <h4 class="modal__title">Name of the project</h4>
+            <p class="modal__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, saepe voluptates laudantium exercitationem possimus sequi. Pariatur consectetur voluptatem harum sit aut. Error placeat laboriosam sequi porro distinctio nisi labore corporis eos numquam impedit voluptatibus assumenda expedita temporibus perspiciatis possimus.</p><br>
+            <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facilis fugiat ab dicta maxime, ad molestiae, est cum quod quam adipisci hic blanditiis quibusdam corrupti suscipit omnis eveniet exercitationem vero veniam? Eveniet ipsam ullam odio nobis ut, mollitia commodi laudantium nostrum ipsa inventore totam iste ad culpa aut deleniti in delectus quod dolore, odit nemo, suscipit ab praesentium quae voluptatum.</p>
+            <div class="modal__labels">
+              <div class="modal__label modal__label--react">
+                <span>React</span>
+              </div>
+              <div class="modal__label modal__label--redux">
+                <span>Redux</span>
+              </div>
+              <div class="modal__label modal__label--webpack">
+                <span>Webpack</span>
+              </div>
+              <div class="modal__label modal__label--sass">
+                <span>SASS</span>
+              </div>
+              <div class="modal__label modal__label--apis">
+                <span>APIs</span>
+              </div>
+              <div class="modal__label modal__label--materialui">
+                <span>MaterialUI</span>
+              </div>
+              <div class="modal__label modal__label--bootstrap">
+                <span>Bootstrap</span>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
   </div>
 
 </body>

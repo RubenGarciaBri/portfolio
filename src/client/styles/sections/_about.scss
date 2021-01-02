@@ -4,14 +4,15 @@
   .about {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
+    align-items: stretch;
+    margin-top: 5rem;
 
     &__left {
       width: 40%;
 
       & img {
         width: 100%;
+        height: 100%;
       }
     }
 
@@ -19,6 +20,51 @@
       width: 60%;
       padding-left: 7.5rem;
 
+      &-heading {
+        margin-bottom: 2.5rem;
+      }
+
+      &-text {
+        color: var(--color-text-dk);
+      }
+
+    }
+  }
+
+  .about-banner {
+    padding: 12.5rem 0;
+    background-color: var(--color-primary);
+   
+    .testimonial {
+      text-align: center;
+      width: 75rem;
+      margin: 0 auto;
+      position: relative;
+      color: #fff;
+
+      &__icon {
+        position: absolute;
+        top: 0;
+        left: 0rem;
+        font-size: 3.2rem;
+        color: var(--color-bg);
+      }
+
+      &__heading {
+      
+      }
+
+      &__small {
+        font-size: 1.6rem;
+        font-weight: 800;
+      }
+
+      &__text {
+        margin-top: 1.5rem;
+        color: #fff;
+        opacity: .8;
+        font-weight: 400;
+      }
 
     }
   }

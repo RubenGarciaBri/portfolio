@@ -1,5 +1,10 @@
 // Import SASS styles
 import './styles/main.scss';
+import MicroModal from 'micromodal';
+
+//Activate Micromodal
+MicroModal.init();
+
 
 //Define Main Variables
 const floatingBtn = document.querySelector('.floating a');

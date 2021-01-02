@@ -1,16 +1,18 @@
 .hero-section {
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+  padding: 0 2rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)),
     url('../img/funnelbg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
   
   .hero {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 10rem;
+    margin-top: 7rem;
     
     &__left {
       width: 50%;
@@ -39,7 +41,7 @@
         &__item {
 
           & a {
-            font-size: 2.2rem;
+            font-size: 2.6rem;
             padding: 0 .5rem;
             color: var(--color-bg);
             transition: all .3s;
@@ -57,5 +59,12 @@
       }
     }
 
+  }
+
+  .hero-img {
+    position: absolute;
+    bottom: 0;
+    right: 125px;
+    width: 40%;
   }
 }

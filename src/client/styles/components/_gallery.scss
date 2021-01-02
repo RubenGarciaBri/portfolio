@@ -1,5 +1,21 @@
 .gallery {
+  margin-top: 8rem;
+}
 
+.gallery-icon {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  top: -.4rem;
+  color: #d4af37;
+}
+
+.gallery-featured {
+  margin-bottom: 3.5rem;
+}
+
+.portfolio-subheading {
+  color: var(--color-text-dk);
 }
 
 .gallery-row {
@@ -13,10 +29,22 @@
   width: 33.33%; 
   position: relative;
   overflow: hidden;
+  transition: all .3s;
 
-  .img-container img {
-    width: 100%;
-    height: 100%;
+  &:hover {
+    transform: translateY(-7px);
+  }
+
+  &--alt {
+    top: -3rem;
+  }
+
+  .img-container {
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .overlay {
@@ -50,8 +78,9 @@
   }
 
   .overlay-description {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.3;
+    
   }
 
   &:not(:last-child) {
