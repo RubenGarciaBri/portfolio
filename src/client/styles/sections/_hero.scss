@@ -1,35 +1,75 @@
 .hero-section {
   height: 100vh;
-  padding: 0 2rem;
+  padding: 0 5rem;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)),
     url('../img/funnelbg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  @include respond(tab-land) {
+    padding: 0 3.5rem;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    padding: 0rem 0 10rem 0;
+  }
   
   .hero {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-top: 7rem;
+
+    @include respond(tab-land) {
+      margin-top: 5rem;
+    }
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      max-width: 65rem;
+      text-align: center;
+      justify-content: center;
+    }
     
     &__left {
       width: 50%;
 
+      @include respond(tab-land) {
+        width: 55%;
+      }
+
+      @include respond(hero-image) {
+        width: 65%;
+      }
+
+      @include respond(tab-port) {
+        width: 100%;
+        text-align: center;
+      }
+
       &-heading {
         margin-bottom: 1.5rem;
         color: var(--color-bg);
+
+        @include respond(tab-port) {
+          margin-bottom: 2.5rem;
+        }
       }
 
       &-subheading {
         margin-bottom: 2rem;
         color: var(--color-bg);
         font-weight: 600;
+
+        @include respond(tab-port) {
+          margin-bottom: 3.5rem;
+        }
       }
 
       &-btn {
-        margin-right: 1.5rem;
         text-align: center;
         min-width: 22rem;
       }
@@ -37,6 +77,11 @@
       &-social {
         display: flex;
         margin-bottom: 2rem;
+
+        @include respond(tab-port) {
+          justify-content: center;
+          margin-bottom: 3.5rem;
+        }
 
         &__item {
 
@@ -66,5 +111,29 @@
     bottom: 0;
     right: 125px;
     width: 40%;
+
+    @include respond(tab-land) {
+      right: 100px;
+    }
+
+    @include respond(hero-image) {
+      right: 15px;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  .hero-img-mobile {
+    display: none;
+    
+    @include respond(tab-port) {
+      margin: 4.5rem auto 0 auto;
+      display: block;
+      border-radius: 50%;
+      width: 12rem;
+      border: 5px solid var(--color-primary);
+    }
   }
 }

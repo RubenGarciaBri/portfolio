@@ -15,75 +15,156 @@
 }
 
 .portfolio-subheading {
-  color: var(--color-text-dk);
+  opacity: .9;
 }
 
 .gallery-row {
+  max-width: 120rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  margin: 0 auto;
 
-.gallery-card {
-  border-radius: .5rem;
-  width: 33.33%; 
-  position: relative;
-  overflow: hidden;
-  transition: all .3s;
-
-  &:hover {
-    transform: translateY(-7px);
+  @include respond(tab-port) {
+    max-width: 75rem;
   }
 
-  &--alt {
-    top: -3rem;
-  }
-
-  .img-container {
-
-    & img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: #222;
-    transition: all .3s;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      opacity: .8;
-      cursor: pointer;
-
-    }
-  }
-
-  .text {
-    padding: 3.5rem;
-  }
-
-  .overlay-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .overlay-description {
-    font-size: 1.6rem;
-    line-height: 1.3;
-    
+  @include respond(tab-port) {
+    flex-direction: column;
   }
 
   &:not(:last-child) {
-    margin-right: 4rem;
+    margin-bottom: 17.5rem;
+  }
+
+  &:first-child {
+    margin-top: 15rem;
+  }
+
+  &__picture {
+    width: 50%;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+
+    @include respond(tab-port) {
+      order: 2;
+      width: 100%;
+      padding-top: 7.5rem;
+    }
+
+    &--alt {
+      top: -3rem;
+    }
+
+    .img-container {
+      text-align: center;
+
+      .img-flashcards {
+        max-width: 67%;
+      }
+
+      .img-wyr {
+        margin-top: 3.5rem;
+        max-width: 100%;
+      }
+
+      .img-contentfulblog {
+        margin-top: 3.5rem;
+        max-width: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__content {
+    width: 50%;
+
+    @include respond(tab-port) {
+      order: 1;
+      width: 100%;
+    }
+
+    .img-container {
+      text-align: center;
+    }
+
+    .img-flashcards {
+      max-width: 65%;
+    }
+
+    &-title {
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      margin-bottom: 4rem;
+      font-size: 1.8rem;
+      opacity: .9;
+    }
+
+    &__btn {
+      text-align: center;
+      min-width: 22rem;
+    }
   }
 }
+
+.project__labels {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4.5rem;
+}
+
+.project__label {
+  display: inline-block;
+  border-radius: 25rem;
+  padding: .5rem 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 1rem;
+  opacity: .9;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &--react {
+    background-color: #03A9F4;
+  }
+
+  &--redux {
+    background-color: #673AB7;
+  }
+
+  &--webpack {
+    background-color: #00BCD4;
+  }
+
+  &--node {
+    background-color: #008b00;
+  }
+
+  &--sass {
+    background-color: #E91E63;
+  }
+
+  &--apis {
+    background-color: #FF9800;
+  }
+
+  &--materialui {
+    background-color: #F44336;
+  }
+
+  &--bootstrap {
+    background-color: #2196F3;
+  }
+}
+
+
+
+  

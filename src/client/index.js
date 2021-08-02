@@ -5,10 +5,11 @@ import MicroModal from 'micromodal';
 //Activate Micromodal
 MicroModal.init();
 
-
 //Define Main Variables
 const floatingBtn = document.querySelector('.floating a');
 const sections = document.querySelectorAll('section');
+const phoneMenuIcon = document.querySelector('.sideNav__icon');
+const phoneMenu = document.querySelector('.sideNav');
 // const section1 = document.querySelector('.section-one');
 
 //Asign navBar as variable
@@ -19,7 +20,7 @@ const navLinks = document.querySelectorAll('.navbar__list-item a');
 const logoLink = document.querySelector('.logo-box a');
 
 //Scroll to each section on click
-navLinks.forEach(link => link.addEventListener('click', goToSection));
+navLinks.forEach((link) => link.addEventListener('click', goToSection));
 
 function goToSection(e) {
   //Prevent default behavior
@@ -29,10 +30,16 @@ function goToSection(e) {
   // Sroll to the section which ID equals the target attribute
   window.scrollTo({
     top: document.querySelector(targetId).offsetTop,
-    behavior: 'smooth'
-  })
+    behavior: 'smooth',
+  });
 }
 
+// Open and close mobile menu
+phoneMenuIcon.addEventListener('click', togglePhoneMenu);
+
+function togglePhoneMenu() {
+  phoneMenu.classList.toggle('sideNav--open');
+}
 
 //Scrolls to the top on click
 logoLink.addEventListener('click', goToTop);
@@ -46,59 +53,7 @@ function goToTop(e) {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   });
 }
-
-//Slideshow
-const slider = document.querySelector('.slider');
-const sliderIcon = document.querySelectorAll('.slider-icon') 
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-// Slider event listeners
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-  console.log("erreerre", scrollLeft)
-});
-
-slider.addEventListener('mouseover', () => {
-  sliderIcon.forEach((icon) => {
-    icon.classList.add('active');
-  })
-  
-});
-
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-  sliderIcon.forEach((icon) => {
-    icon.classList.remove('active');
-  })
-  
-});
-
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
- 
-});
-
-slider.addEventListener('mousemove', (e) => {
-  if (!isDown) return;  // stop the fn from running
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX);
-  slider.scrollLeft = scrollLeft - walk;
-  
-  console.log('sdsd', scrollLeft)
-  console.log(slider.scrollLeft)
-});
-
 

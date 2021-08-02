@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/5d3123e5e3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>My Portfolio</title>
 </head>
-
 <body>
   <section id="section-1" class="hero-section">
     <nav class="navbar">
@@ -19,11 +19,28 @@
         </div>
         <ul class="navbar__list">
           <li class="navbar__list-item"><a href="#section-2">About</a></li>
-          <li class="navbar__list-item"><a href="#section-3">Recommendations
-            
-          </a></li>
+          <li class="navbar__list-item"><a href="#section-3">Testimonials</a></li>
           <li class="navbar__list-item"><a href="#section-4">Portfolio</a></li>
           <li class="navbar__list-item"><a href="#section-5">Contact</a></li>
+        </ul>
+        <!-- Mobile Menu -->
+        <i class="sideNav__icon fas fa-bars"></i>
+        <ul class="sideNav shadow-slim">
+          <li class="sideNav__item">
+            <a href="#section-2">           
+              <span>About</span>
+            </a>
+          </li>
+          <li class="sideNav__item">
+            <a href="#section-3">
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li class="sideNav__item">
+            <a href="#section-4">
+              <span>Contact</span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -38,19 +55,14 @@
           <li class="hero__left-social__item"><a href="#"><i class="fab fa-github"></i></a></li>
           <li class="hero__left-social__item"><a href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>
-        <a href="#" class="btn btn--primary hero__left-btn shadow-s">Let's Talk</a>
-        <a href="#" class="btn btn--secondary hero__left-btn shadow-s">See My Work</a>
+        <a href="#section-5" class="btn btn--primary hero__left-btn shadow-s">Let's Talk</a>
+        <a href="#section-4" class="btn btn--secondary hero__left-btn shadow-s">See My Work</a>
+        <img src="<%= require('../img/prof-small.png')%>" class="hero-img-mobile">
       </div>
-      
     </div>
     <img src="<%= require('../img/prof2.png')%>" class="hero-img">
-    
   </section>
-  <section id="section-3" class="section-about">
-
-    <div class="slider-container">
-      <a class="slider-icon slider-icon--left"><i class="fas fa-chevron-left"></i></a>
-      <a class="slider-icon slider-icon--right"><i class="fas fa-chevron-right"></i></a>   
+  <section id="section-2" class="section-about">
     <div class="slider">   
       <div class="item">
         <i class="devicon-html5-plain colored"></i>
@@ -76,94 +88,193 @@
       <div class="item">
         <i class="devicon-nodejs-plain colored"></i>
       </div>
-      <div class="item">
-        <i class="devicon-babel-plain colored"></i>
+    </div>
+    <div class="slider-mobile">   
+      <div class="slider-mobile__row">
+        <div class="item">
+          <i class="devicon-html5-plain colored"></i>
+        </div>
+        <div class="item">
+          <i class="devicon-css3-plain colored"></i>
+        </div>
+        <div class="item">
+          <i class="devicon-sass-original colored"></i>
+        </div>
+        <div class="item">
+          <i class="devicon-javascript-plain colored"></i>
+        </div>
       </div>
-      <div class="item">
-        <i class="devicon-git-plain colored"></i>
-      </div>
-      <div class="item">
-        <i class="devicon-visualstudio-plain colored"></i>
-      </div>
-      <div class="item">
-        <i class="devicon-materialui-plain colored"></i>
+      <div class="slider-mobile__row">
+        <div class="item">
+          <i class="devicon-react-original colored"></i>
+        </div>
+        <div class="item">
+          <i class="devicon-redux-original colored"></i>
+        </div>
+        <div class="item">
+          <i class="devicon-webpack-plain colored"></i>
+        </div>
+        <div class="item">
+          <i class="devicon-nodejs-plain colored"></i>
+        </div>
       </div>
     </div>
-    </div>
-
     <div class="about main-container">
       <div class="about__left">
         <img src="<%= require('../img/3.png')%>" alt="">
       </div>
       <div class="about__right">
         <h3 class="about__right-heading">About Me</h3>
-        <p class="about__right-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae commodi placeat ad
-          dolor ullam saepe aliquid officiis porro, deleniti laboriosam voluptate aperiam recusandae illo voluptas
-          mollitia provident aut eius sunt! Voluptate nihil amet dignissimos.</p>
-        <p class="about__right-text"><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maxime sit veniam
-          laborum quos rem dolor, adipisci vel culpa molestias. Consequuntur velit sapiente officia! Error nobis
-          facilis.</p>
+        <p class="about__right-text">I'm a junior front-end web developer specialised in React and currently learning the MERN stack. I'm also familiar with the most popular build tools such as Webpack, Babel, NPM, Git, etc.</p>
+        <p class="about__right-text">I'm also competent working with API's as well as writing asyncronous code. Not only I'm passionate about programming, but I also enjoy creating beautifully designed user interfaces that provide a great user experience.</p>
+        <p class="about__right-text">I love facing new challenges constantly to grow my skills and become a better programmer. I have showcased my best projects below for you to see what I'm capable of building.</p>
+        <p class="about__right-text">My long-term goal is to improve people's lives through technology and make this world a better place. I also belive writing code is the way to go.</p>
+        <img src="<%= require('../img/3.png')%>" class="about__mobileImage" alt="">
       </div>
     </div>
-
-    <div class="about-banner">
-      <div class="testimonial main-container">
-        <i class="testimonial__icon fas fa-quote-left"></i>
-        <h3 class="testimonial__heading">Lynnette Gilfillian</h3>
-        <span class="testimonial__small">Aegon - Line Manager</span>
-        <p class="testimonial__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum possimus recusandae rem facere magni quisquam aliquid! Facilis earum, dignissimos sed quasi repellat odio hic.</p>
-      </div>
-    </div>
-
   </section>
-  <section id="section-2" class="section-portfolio">
+  <section id="section-3" class="section-testimonials">
+    <div class="testimonial main-container">
+      <i class="testimonial__icon fas fa-quote-left"></i>
+      <h3 class="testimonial__heading">Lynnette Gilfillian</h3>
+      <span class="testimonial__small">Aegon - Line Manager</span>
+      <p class="testimonial__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum possimus recusandae rem facere magni quisquam aliquid! Facilis earum, dignissimos sed quasi repellat odio hic.</p>
+    </div>
+  </section>
+  <section id="section-4" class="section-portfolio">
       <div class="section-title main-container">
         <h2 class="portfolio-heading">Portfolio</h2>
         <p class="portfolio-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quasi nam laborum placeat! Facilis voluptatem vel repudiandae corporis aliquam perferendis.</p>
       </div>
-      <div class="gallery main-container">
-        <h3 class="gallery-featured"><i class="gallery-icon fas fa-star"></i> Featured</h3>
+      <div class="gallery">
         <div class="gallery-row">
-          <div class="gallery-card" data-micromodal-trigger="modal-1">
+          <div class="gallery-row__picture">
             <div class="img-container">
-              <img src="https://via.placeholder.com/600">
-            </div>
-            <div class="overlay">
-              <div class="text">
-                <h4 class="overlay-title">Title</h4>
-                 <p class="overlay-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quae.</p>
-              </div>           
+              <img src="<%= require('../img/phone1.png')%>" class="img-flashcards">
             </div>
           </div>
-          <div class="gallery-card gallery-card--alt">
-            <div class="img-container">
-              <img src="https://via.placeholder.com/600">
-            </div>
-            <div class="overlay">
-              <div class="text">
-                <h4 class="overlay-title">Title</h4>
-                <p class="overlay-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quae.</p>
-              </div>           
-            </div>
-          </div>
-          <div class="gallery-card">
-            <div class="img-container">
-              <img src="https://via.placeholder.com/600">
-            </div>
-            <div class="overlay">
-              <div class="text">
-                <h4 class="overlay-title">Title</h4>
-                <p class="overlay-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quae.</p>
-              </div>           
-            </div>
-          </div>
+          <div class="gallery-row__content">
+            <h3 class="gallery-row__content-title">Readable</h3>
+            <p class="gallery-row__content-text">Readable is a modern social media, online community discussion app.<br>This is my flagship project which incorporates elements similar to other famous social platforms such as Reddit and Facebook.</p>
+            <p class="gallery-row__content-text">You can add posts to the main feed that anyone can interact with. Some of the cool features are: Upvotes and downvotes, add to favourites, comments, a live search bar and notifications. You even have your own public profile that you can customise.</p>
+            <p class="gallery-row__content-text">This app uses Firebase Cloud Functions, the Firestore Database, Storage and Authentication on the back end, which means it's full-stack. You can create your own account, log-in and all the changes you make will be saved in the cloud in real time.</p>
+            <a href="#" class="btn btn--primary hero__btn shadow-s">See Live</a>
+            <a href="#" class="btn btn--secondary hero__btn shadow-s">Github Repo</a>
+            <div class="project__labels">
+              <div class="project__label project__label--apis">
+                <span>Firebase</span>
+              </div>
+              <div class="project__label project__label--react">
+                <span>React</span>
+              </div>
+              <div class="project__label project__label--redux">
+                <span>Redux</span>
+              </div>
+              <div class="project__label project__label--webpack">
+                <span>Cloud Functions</span>
+              </div>
+              <div class="project__label project__label--sass">
+                <span>SASS</span>
+              </div>     
+              </div> 
+          </div>        
         </div>
-       
+        <div class="gallery-row">
+            <div class="gallery-row__content">
+              <h3 class="gallery-row__content-title">Would You Rather</h3>
+              <p class="gallery-row__content-text">This is an online version of the classic "Would you rather" game.<br>In order to play you can either create your own polls or answer any of the already open ones.</p>
+              <p class="gallery-row__content-text">When you complete a poll, the app will show you what the other players answered and it will be moved to the "Answered" category. Every time you either create or complete a poll, you will receive 1 point that will be reflected in the leaderboard page.</p>
+              <p class="gallery-row__content-text">The app lets you select from 5 out-of-the-box avatars that you can switch between to see the results in real time. Local storage is also used so all your progress is saved every time you come back.</p>
+              <a href="#" class="btn btn--primary hero__btn shadow-s">See Live</a>
+              <a href="#" class="btn btn--secondary hero__btn shadow-s">Github Repo</a>
+              <div class="project__labels">
+                <div class="project__label project__label--react">
+                  <span>React</span>
+                </div>
+                <div class="project__label project__label--redux">
+                  <span>Redux</span>
+                </div>
+                <div class="project__label project__label--node">
+                  <span>NodeJS</span>
+                </div>
+                <div class="project__label project__label--webpack">
+                  <span>Local Storage</span>
+                </div>
+                <div class="project__label project__label--sass">
+                  <span>SASS</span>
+                </div>
+                </div>
+              </div>
+              <div class="gallery-row__picture">
+              <div class="img-container">
+                <img src="<%= require('../img/wyr.png')%>" class="img-wyr">
+              </div> 
+            </div>
+        </div>     
+        <div class="gallery-row">
+            <div class="gallery-row__picture">
+              <div class="img-container">
+                <img src="<%= require('../img/contentful-laptop2.png')%>" class="img-contentfulblog">
+              </div>
+            </div>
+            <div class="gallery-row__content">
+              <h3 class="gallery-row__content-title">Contentful Blog</h3>
+              <p class="gallery-row__content-text">This project is a fictional personal blog that uses the static site generator Gatsby and Contenful as a headless CMS.</p>
+              <p class="gallery-row__content-text">This site uses GraphQL queries to fetch all the published blog posts on the Contenful dashboard. It also automatically deploys to Netlify every time a new blog post is published, deleted or edited which makes it a very easy-to-use solution for people with little programming knowledge.</p>
+              <p class="gallery-row__content-text">The motivation behind this project was to learn modern blogging methods that use headless content management systems and static site generators, as opossed to other tradional technologies such as Wordpress.</p>
+              <a href="#" class="btn btn--primary hero__btn shadow-s">See Live</a>
+              <a href="#" class="btn btn--secondary hero__btn shadow-s">Github Repo</a>
+              <div class="project__labels">
+                <div class="project__label project__label--react">
+                  <span>React</span>
+                </div>
+                <div class="project__label project__label--redux">
+                  <span>Gatsby</span>
+                </div>
+                <div class="project__label project__label--apis">
+                  <span>SASS</span>
+                </div>
+                <div class="project__label project__label--webpack">
+                  <span>Contentful</span>
+                </div>
+                <div class="project__label project__label--sass">
+                  <span>GraphQL</span>
+                </div>
+                </div>
+            </div> 
+        </div>   
+        <div class="gallery-row">
+            <div class="gallery-row__content">    
+              <h3 class="gallery-row__content-title">Flashcards</h3>
+              <p class="gallery-row__content-text">This is a study app that helps you memorise information. You can create cards with questions and practice recalling the answers. You can also categorise all your cards into decks for better organisation.</p>
+              <p class="gallery-row__content-text">Whenever you want to practice, all you have to do is click on "Start Quiz" and then select whether you got the question right or wrong. The app will also indicate the remaining cards left on that deck.</p>
+              <p class="gallery-row__content-text">By the end, you will be able to see the results, including a total percentage so you can assess how well you know your stuff.</p>
+              <a href="#" class="btn btn--primary hero__btn shadow-s">See Live</a>
+              <a href="#" class="btn btn--secondary hero__btn shadow-s">Github Repo</a>
+              <div class="project__labels">
+                <div class="project__label project__label--react">
+                  <span>React Native</span>
+                </div>
+                <div class="project__label project__label--redux">
+                  <span>Redux</span>
+                </div>
+                <div class="project__label project__label--webpack">
+                  <span>Expo</span>
+                </div>
+                <div class="project__label project__label--sass">
+                  <span>Styled Components</span>
+                </div>
+                </div>
+              </div>
+              <div class="gallery-row__picture">
+                <div class="img-container">
+                  <img src="<%= require('../img/phone1.png')%>" class="img-flashcards">
+                </div>
+              </div>
+        </div>
       </div>
-    
   </section>
-  
-  <section id="section-4" class="section-contact">
+  <section id="section-5" class="section-contact">
     <div class="contact main-container shadow-s">
       <div class="contact__left">
         <h3 class="contact__left-heading">Let's get in touch</h3>
@@ -191,12 +302,9 @@
       </div>
     </div>
   </section>
-
   <div class="floating">
     <a href="#" class="floating__btn"><i class="fas fa-arrow-up floating__btn-icon"></i></a>
   </div>
-
-  
   <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
       <div class="modal__container shadow-s" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
