@@ -17,10 +17,14 @@ const navBar = document.querySelector('.navbar');
 
 //Define anchors in nav to variables
 const navLinks = document.querySelectorAll('.navbar__list-item a');
+const mobileNavLinks = document.querySelectorAll('.sideNav__item a');
+const buttonLinks = document.querySelectorAll('.btn');
 const logoLink = document.querySelector('.logo-box a');
 
 //Scroll to each section on click
 navLinks.forEach((link) => link.addEventListener('click', goToSection));
+buttonLinks.forEach((link) => link.addEventListener('click', goToSection));
+mobileNavLinks.forEach((link) => link.addEventListener('click', goToSection));
 
 function goToSection(e) {
   //Prevent default behavior
@@ -36,6 +40,12 @@ function goToSection(e) {
 
 // Open and close mobile menu
 phoneMenuIcon.addEventListener('click', togglePhoneMenu);
+
+window.addEventListener('click', function (e) {
+  if (e.target != phoneMenu && e.target != phoneMenuIcon) {
+    phoneMenu.classList.remove('sideNav--open');
+  } 
+});
 
 function togglePhoneMenu() {
   phoneMenu.classList.toggle('sideNav--open');
@@ -56,4 +66,3 @@ function goToTop(e) {
     behavior: 'smooth',
   });
 }
-
