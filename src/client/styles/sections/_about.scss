@@ -16,6 +16,10 @@
       width: 40%;  
       position: relative;
 
+      @include respond(tab-land) {
+        width: 30%;
+      }
+
       @include respond(tab-port) {
         width: 100%;  
       }
@@ -25,6 +29,10 @@
         bottom: 0;
         left: 0;
         width: 100%;
+
+        @include respond(tab-land) {
+          width: 120%;
+        }
 
         @include respond(tab-port) {
           display: none;
@@ -36,6 +44,10 @@
       width: 60%;
       padding-left: 7.5rem;
       padding-bottom: 7.5rem;
+
+      @include respond(tab-land) {
+        width: 70%;
+      }
 
       @include respond(hero-image) {
         padding-bottom: 0;
@@ -66,8 +78,12 @@
       @include respond(tab-port) {
         display: block;
         margin: 5rem auto 0 auto;
-        width: 40rem;
+        width: 35rem;
         text-align: center;
+      }
+
+      @include respond(phone) {
+        width: 28rem;
       }
     }
   }

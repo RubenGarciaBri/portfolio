@@ -10,11 +10,7 @@
 
   @include respond(tab-land) {
     padding: 0 3.5rem;
-  }
-
-  @include respond(tab-port) {
     height: auto;
-    padding: 0rem 0 10rem 0;
   }
   
   .hero {
@@ -24,11 +20,7 @@
     margin-top: 7rem;
 
     @include respond(tab-land) {
-      margin-top: 5rem;
-    }
-
-    @include respond(tab-port) {
-      margin: 0 auto;
+      padding: 0rem auto 3rem auto;
       max-width: 65rem;
       text-align: center;
       justify-content: center;
@@ -38,17 +30,18 @@
       width: 50%;
 
       @include respond(tab-land) {
-        width: 55%;
-      }
-
-      @include respond(hero-image) {
-        width: 65%;
-      }
-
-      @include respond(tab-port) {
         width: 100%;
         text-align: center;
       }
+
+      // @include respond(hero-image) {
+      //   width: 65%;
+      // }
+
+      // @include respond(tab-port) {
+      //   width: 100%;
+      //   text-align: center;
+      // }
 
       &-heading {
         margin-bottom: 1.5rem;
@@ -78,7 +71,7 @@
         display: flex;
         margin-bottom: 2rem;
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
           justify-content: center;
           margin-bottom: 3.5rem;
         }
@@ -113,14 +106,6 @@
     width: 40%;
 
     @include respond(tab-land) {
-      right: 100px;
-    }
-
-    @include respond(hero-image) {
-      right: 15px;
-    }
-
-    @include respond(tab-port) {
       display: none;
     }
   }
@@ -128,8 +113,8 @@
   .hero-img-mobile {
     display: none;
     
-    @include respond(tab-port) {
-      margin: 4.5rem auto 0 auto;
+    @include respond(tab-land) {
+      margin: 4.5rem auto 4.5rem auto;
       display: block;
       border-radius: 50%;
       width: 12rem;

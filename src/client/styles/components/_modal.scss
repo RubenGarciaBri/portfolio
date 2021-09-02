@@ -4,6 +4,7 @@
 
 .modal {
   font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  
 }
 
 .modal__overlay {
@@ -21,7 +22,7 @@
 .modal__container {
   background-color: #fff;
   padding: 30px 50px;
-  max-width: 960px;
+  max-width: 900px;
   max-height: 100vh;
   border-radius: 5px;
   overflow-y: auto;
@@ -126,17 +127,36 @@
 }
 
 .modal__right {
-  width: 65%;
-  padding-left: 5rem;
+  width: 100%;
+  padding: 0 10rem 3rem 5rem;
 }
 
 .modal__title {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .modal__text {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.modal__live {
   font-size: 1.6rem;
+  margin-right: 1.5rem;
+
+  i {
+    color: #222;
+  }
+}
+
+.modal__github {
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+
+  i {
+    color: #222;
+  }
 }
 
 .modal__btn {
@@ -161,8 +181,7 @@
 .modal__labels {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1rem;
-  
+  margin-top: 2.5rem;
 }
 
 .modal__label {
@@ -174,7 +193,7 @@
   margin-top: 1rem;
 
   &:not(:last-child) {
-    margin-right: .5rem;
+    margin-right: 1rem;
   }
 
   &--react {
@@ -195,6 +214,10 @@
 
   &--apis {
     background-color: #FF9800;
+  }
+
+  &--node {
+    background-color: #00C853;
   }
 
   &--materialui {

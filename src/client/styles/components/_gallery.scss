@@ -1,170 +1,252 @@
+// .gallery {
+//   margin-top: 8rem;
+// }
+
+// .gallery-icon {
+//   font-size: 2rem;
+//   display: inline-block;
+//   position: relative;
+//   top: -.4rem;
+//   color: #d4af37;
+// }
+
+// .gallery-featured {
+//   margin-bottom: 3.5rem;
+// }
+
+// .portfolio-subheading {
+//   opacity: .9;
+// }
+
+// .gallery-row {
+//   max-width: 120rem;
+//   display: flex;
+//   margin: 0 auto;
+
+//   @include respond(tab-port) {
+//     max-width: 75rem;
+//   }
+
+//   @include respond(tab-port) {
+//     flex-direction: column;
+//   }
+
+//   &:not(:last-child) {
+//     margin-bottom: 17.5rem;
+//   }
+
+//   &:first-child {
+//     margin-top: 15rem;
+//   }
+
+//   &__picture {
+//     width: 50%;
+//     border-radius: .5rem;
+//     position: relative;
+//     overflow: hidden;
+//     transition: all .3s;
+
+//     @include respond(tab-port) {
+//       order: 2;
+//       width: 100%;
+//       padding-top: 7.5rem;
+//     }
+
+//     &--alt {
+//       top: -3rem;
+//     }
+
+//     .img-container {
+//       text-align: center;
+
+//       .img-flashcards {
+//         max-width: 67%;
+//       }
+
+//       .img-wyr {
+//         margin-top: 3.5rem;
+//         max-width: 100%;
+//       }
+
+//       .img-contentfulblog {
+//         margin-top: 3.5rem;
+//         max-width: 100%;
+//       }
+//     }
+
+//     &:not(:last-child) {
+//       margin-right: 4rem;
+//     }
+//   }
+
+//   &__content {
+//     width: 50%;
+
+//     @include respond(tab-port) {
+//       order: 1;
+//       width: 100%;
+//     }
+
+//     .img-container {
+//       text-align: center;
+//     }
+
+//     .img-flashcards {
+//       max-width: 65%;
+//     }
+
+//     &-title {
+//       margin-bottom: 2rem;
+//     }
+
+//     &-text {
+//       margin-bottom: 4rem;
+//       font-size: 1.8rem;
+//       opacity: .9;
+//     }
+
+//     &__btn {
+//       text-align: center;
+//       min-width: 22rem;
+//     }
+//   }
+// }
+
+// .project__labels {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: 4.5rem;
+// }
+
+// .project__label {
+//   display: inline-block;
+//   border-radius: 25rem;
+//   padding: .5rem 1.5rem;
+//   font-size: 1.2rem;
+//   letter-spacing: 1px;
+//   color: #fff;
+//   margin-top: 1rem;
+//   opacity: .9;
+
+//   &:not(:last-child) {
+//     margin-right: 1rem;
+//   }
+
+//   &--react {
+//     background-color: #03A9F4;
+//   }
+
+//   &--redux {
+//     background-color: #673AB7;
+//   }
+
+//   &--webpack {
+//     background-color: #00BCD4;
+//   }
+
+//   &--node {
+//     background-color: #008b00;
+//   }
+
+//   &--sass {
+//     background-color: #E91E63;
+//   }
+
+//   &--apis {
+//     background-color: #FF9800;
+//   }
+
+//   &--materialui {
+//     background-color: #F44336;
+//   }
+
+//   &--bootstrap {
+//     background-color: #2196F3;
+//   }
+// }
+
+
 .gallery {
   margin-top: 8rem;
-}
+  width: 100%;
 
-.gallery-icon {
-  font-size: 2rem;
-  display: inline-block;
-  position: relative;
-  top: -.4rem;
-  color: #d4af37;
-}
-
-.gallery-featured {
-  margin-bottom: 3.5rem;
-}
-
-.portfolio-subheading {
-  opacity: .9;
-}
-
-.gallery-row {
-  max-width: 120rem;
-  display: flex;
-  margin: 0 auto;
-
-  @include respond(tab-port) {
-    max-width: 75rem;
-  }
-
-  @include respond(tab-port) {
-    flex-direction: column;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 17.5rem;
-  }
-
-  &:first-child {
-    margin-top: 15rem;
-  }
-
-  &__picture {
-    width: 50%;
-    border-radius: .5rem;
-    position: relative;
-    overflow: hidden;
-    transition: all .3s;
+  .gallery-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    gap: 5rem;
 
     @include respond(tab-port) {
-      order: 2;
-      width: 100%;
-      padding-top: 7.5rem;
+      flex-direction: column;
+      gap: 10rem;
     }
 
-    &--alt {
-      top: -3rem;
-    }
+    .gallery-card {
+      width: 50rem;
+      height: 40rem;
+      border-radius: .5rem;
+      background: #fff;
+      position: relative;
+      transition: all .3s;
 
-    .img-container {
-      text-align: center;
-
-      .img-flashcards {
-        max-width: 67%;
+      @include respond(tab-port) {
+        width: 75%;
       }
 
-      .img-wyr {
-        margin-top: 3.5rem;
-        max-width: 100%;
+      @include respond(phone) {
+        width: 90%;
       }
 
-      .img-contentfulblog {
-        margin-top: 3.5rem;
-        max-width: 100%;
+      &:hover {
+        transform: translateY(-10px);
+        transform: scale(1.03)
       }
-    }
+     
+      a {
+        width: 100%;
+        height: 100%;
+      }
 
-    &:not(:last-child) {
-      margin-right: 4rem;
-    }
-  }
+      span {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 4rem;
+        color: #222;
+        font-weight: 800;
+      }
 
-  &__content {
-    width: 50%;
+      &--1 {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%),
+        url('../img/wyr-5.jpg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
-    @include respond(tab-port) {
-      order: 1;
-      width: 100%;
-    }
+      &--2 {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%),
+        url('../img/contentful-1.jpg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
-    .img-container {
-      text-align: center;
-    }
+      &--3 {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%),
+        url('../img/materialize-1.jpg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
-    .img-flashcards {
-      max-width: 65%;
-    }
-
-    &-title {
-      margin-bottom: 2rem;
-    }
-
-    &-text {
-      margin-bottom: 4rem;
-      font-size: 1.8rem;
-      opacity: .9;
-    }
-
-    &__btn {
-      text-align: center;
-      min-width: 22rem;
+      &--4 {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 80%),
+        url('../img/flashcards-5.png');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
-
-.project__labels {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 4.5rem;
-}
-
-.project__label {
-  display: inline-block;
-  border-radius: 25rem;
-  padding: .5rem 1.5rem;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  color: #fff;
-  margin-top: 1rem;
-  opacity: .9;
-
-  &:not(:last-child) {
-    margin-right: 1rem;
-  }
-
-  &--react {
-    background-color: #03A9F4;
-  }
-
-  &--redux {
-    background-color: #673AB7;
-  }
-
-  &--webpack {
-    background-color: #00BCD4;
-  }
-
-  &--node {
-    background-color: #008b00;
-  }
-
-  &--sass {
-    background-color: #E91E63;
-  }
-
-  &--apis {
-    background-color: #FF9800;
-  }
-
-  &--materialui {
-    background-color: #F44336;
-  }
-
-  &--bootstrap {
-    background-color: #2196F3;
-  }
-}
-
-
-
-  
