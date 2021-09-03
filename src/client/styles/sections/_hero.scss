@@ -1,6 +1,6 @@
 .hero-section {
   height: 100vh;
-  padding: 0 5rem;
+  padding: 0 1.5rem;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)),
     url('../img/funnelbg.png');
   background-position: center;
@@ -9,8 +9,12 @@
   position: relative;
 
   @include respond(tab-land) {
-    padding: 0 3.5rem;
+    padding: 0rem 1.5rem 10rem 1.5rem;
     height: auto;
+  }
+
+  @include respond(phone) {
+    padding-bottom: 7.5rem;
   }
   
   .hero {
@@ -20,10 +24,14 @@
     margin-top: 7rem;
 
     @include respond(tab-land) {
-      padding: 0rem auto 3rem auto;
       max-width: 65rem;
       text-align: center;
       justify-content: center;
+      margin-top: 5rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 3rem;
     }
     
     &__left {
@@ -50,6 +58,10 @@
         @include respond(tab-port) {
           margin-bottom: 2.5rem;
         }
+
+        @include respond(phone) {
+          font-size: 4rem;
+        }
       }
 
       &-subheading {
@@ -65,6 +77,7 @@
       &-btn {
         text-align: center;
         min-width: 22rem;
+        margin-bottom: 2rem;
       }
 
       &-social {
@@ -110,15 +123,15 @@
     }
   }
 
-  .hero-img-mobile {
-    display: none;
+  // .hero-img-mobile {
+  //   display: none;
     
-    @include respond(tab-land) {
-      margin: 4.5rem auto 4.5rem auto;
-      display: block;
-      border-radius: 50%;
-      width: 12rem;
-      border: 5px solid var(--color-primary);
-    }
-  }
+  //   @include respond(tab-land) {
+  //     margin: 4.5rem auto 4.5rem auto;
+  //     display: block;
+  //     border-radius: 50%;
+  //     width: 12rem;
+  //     border: 5px solid var(--color-primary);
+  //   }
+  // }
 }

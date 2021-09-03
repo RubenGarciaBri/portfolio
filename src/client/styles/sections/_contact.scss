@@ -94,6 +94,7 @@
         width: 90%;
         margin: 0 auto;
         color: #fff;
+        font-weight: 400;
 
         @include respond(tab-land) {
           width: 100%
@@ -104,26 +105,26 @@
           font-size: 1.6rem;
           color: inherit;
           border-radius: 5px;
-          border: 2px solid #fff;
+          border: 1px solid #fff;
           padding: 1.3rem 1.8rem;
           background: var(--color-primary);
+          font-family: 'Nunito Sans',
+          sans-serif;
         }
 
         &__input::placeholder,
         &__textarea::placeholder {
-          color: #fff;
+          color: #eee;
         }
 
         &__input {
           display: block;
           width: 100%;
           margin-bottom: 1.2rem;
-
         }
 
         &__textarea {
           width: 100%;
-          font-size: 1.8rem;
           resize: none;
         }
 
