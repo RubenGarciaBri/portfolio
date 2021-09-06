@@ -1,9 +1,9 @@
 .hero-section {
   height: 100vh;
   padding: 0 1.5rem;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)),
-    url('../img/funnelbg.png');
-  background-position: center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)),
+    url('../img/background.png');
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -68,6 +68,7 @@
         margin-bottom: 2rem;
         color: var(--color-bg);
         font-weight: 600;
+        font-size: 2.4rem;
 
         @include respond(tab-port) {
           margin-bottom: 3.5rem;
