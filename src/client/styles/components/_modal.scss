@@ -129,6 +129,10 @@
 .modal__right {
   width: 100%;
   padding: 0 10rem 3rem 5rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
 }
 
 .modal__title {
