@@ -133,11 +133,17 @@
           width: 100%;
           margin-top: 1rem;
           cursor: pointer;
-          transition: .3s;
+          transition: all .3s;
+          padding: 1.6rem 4.8rem;
+          border-radius: 25rem;
+          font-size: 1.7rem;
+          font-weight: 800;
+          letter-spacing: 0;
 
           &:hover {
             color: var(--color-primary);
             background-color: #fff;
+            transform: translateY(-5px);
           }
         }
       }
