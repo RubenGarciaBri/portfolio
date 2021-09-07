@@ -25,6 +25,10 @@
     border-radius: .5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);
 
+    @include respond (tab-port) {
+      padding: 5rem;
+    }
+
     &:not(:last-child) {
       margin-bottom: 7.5rem;
     }
@@ -32,6 +36,10 @@
     &__left {
       width: 20%;
       align-self: stretch;
+
+      @include respond (tab-port) {
+        display: none;
+      }
 
       svg {
         margin-top: 1rem;
@@ -44,6 +52,10 @@
       width: 80%;
       align-self: stretch;
       text-align: left;
+
+      @include respond (tab-port) {
+        width: 100%;
+      }
 
       &-school {
         font-weight: 400;
