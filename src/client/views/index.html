@@ -129,7 +129,7 @@
         <img src="<%= require('../img/3.png')%>" alt="">
       </div>
       <div class="about__right">
-        <h3 class="about__right-heading">About Me</h3>
+        <h2 class="about__right-heading">About Me</h2>
         <p class="about__right-text">I'm a junior front-end web developer specialised in React and currently learning the MERN stack. I'm also familiar with the most popular build tools such as Webpack, Babel, NPM, Git, etc.</p>
         <p class="about__right-text">I'm also competent working with API's as well as writing asyncronous code. Not only I'm passionate about programming, but I also enjoy creating beautifully designed user interfaces that provide a great user experience.</p>
         <p class="about__right-text">I love facing new challenges constantly to grow my skills and become a better programmer. I have showcased my best projects below for you to see what I'm capable of building.</p>
@@ -138,12 +138,54 @@
       </div>
     </div>
   </section>
-  <section id="section-3" class="section-testimonials">
+  <!-- <section id="section-3" class="section-testimonials">
     <div class="testimonial main-container">
       <i class="testimonial__icon fas fa-quote-left"></i>
       <h3 class="testimonial__heading">Lynnette Gilfillian</h3>
       <span class="testimonial__small">Aegon - Line Manager</span>
       <p class="testimonial__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum possimus recusandae rem facere magni quisquam aliquid! Facilis earum, dignissimos sed quasi repellat odio hic.</p>
+    </div>
+  </section> -->
+  <section id="section-3" class="section-education">
+    <div class="section-education__container">
+      <h2 class="section-education__heading">Certifications</h2>
+      <!-- <p class="section-education__subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum possimus recusandae rem facere magni quisquam aliquid.</p> -->
+    </div>
+    <div class="container-certifications">
+      <div class="certification">
+        <div class="certification__left">
+          <svg class="certification__left" xmlns="http://www.w3.org/2000/svg" width="250" height="50" viewBox="0 0 40 40"><path fill="#00508f" d="M13.3 0L0 7.7v17.6C0 33.4 6.5 40 14.6 40c2.7 0 5.2-.7 7.4-1.9l10.8-6.2C37.1 29.6 40 25.2 40 20V1.6L37.4.1 26 6.2v19.2c0 .8-.1 1.6-.2 2.4-.2.8-.4 1.5-.7 2.2l-.3.6c-.4 0-2.9-.9-4.2-1.8-.6-.4-1.1-.8-1.6-1.3s-.9-1-1.3-1.6c-.4-.6-.7-1.2-1-1.8-.3-.6-.5-1.3-.6-2-.1-.7-.1-1.4-.1-2.1V1.6L13.3 0zm6.5 36.2c-.7.3-1.7.7-2.5.9-.8.2-1.5.2-2.3.2-.8 0-1.6-.1-2.4-.3-.8-.2-1.5-.4-2.2-.7-.7-.3-1.4-.7-2-1.1C6.6 34.1 5.7 33.1 5 32c-.4-.6-.8-1.3-1.1-2-.3-.7-.5-1.5-.7-2.3-.2-.8-.2-1.6-.2-2.4V9.2l10-6.1V20c0 6.4 4.7 11.8 10.7 13.1-.2.3-.4.6-.7.8-1.1 1.1-2 1.8-3.2 2.3zm17-14c-.1.7-.4 1.4-.6 2-.3.6-.6 1.2-1 1.8-.4.6-1.6 2.1-3.2 3-1.6.9-3.1 1.2-4 1.4.6-1.6 1-3.2 1-5V7.7l8-4.6V20c0 .8 0 1.5-.2 2.2z"/></svg>
+        </div>
+        <div class="certification__right">
+          <h4 class="certification__right-school">Udacity</h4>
+          <h5 class="certification__right-title"><i class="fab fa-react"></i> React Developer Nanodegree</h5>
+          <p class="certification__right-duration">Nov 2020 — Mar 2021</p>
+          <div class="certification__right-separator"></div>
+          <p class="certification__right-description">An online training program on building declarative user interfaces for the web with React, and managing state more predictably in your applications with Redux.</p>
+          <p class="certification__right-technologies">
+            <b>Technologies:</b><br>
+            React Fundamentals, JSX, State and Asynchronous Data Management, React Router, Redux with Middleware and Thunk, React Native and Expo.
+          </p>
+          <a href="https://confirm.udacity.com/GDRPGK5Y" target="_blank" class="certification__right-btn shadow-xs"><i class="fas fa-award"></i> See Certificate</a>
+        </div>
+      </div>
+      <div class="certification">
+        <div class="certification__left">
+          <svg class="certification__left" xmlns="http://www.w3.org/2000/svg" width="250" height="50" viewBox="0 0 40 40"><path fill="#00508f" d="M13.3 0L0 7.7v17.6C0 33.4 6.5 40 14.6 40c2.7 0 5.2-.7 7.4-1.9l10.8-6.2C37.1 29.6 40 25.2 40 20V1.6L37.4.1 26 6.2v19.2c0 .8-.1 1.6-.2 2.4-.2.8-.4 1.5-.7 2.2l-.3.6c-.4 0-2.9-.9-4.2-1.8-.6-.4-1.1-.8-1.6-1.3s-.9-1-1.3-1.6c-.4-.6-.7-1.2-1-1.8-.3-.6-.5-1.3-.6-2-.1-.7-.1-1.4-.1-2.1V1.6L13.3 0zm6.5 36.2c-.7.3-1.7.7-2.5.9-.8.2-1.5.2-2.3.2-.8 0-1.6-.1-2.4-.3-.8-.2-1.5-.4-2.2-.7-.7-.3-1.4-.7-2-1.1C6.6 34.1 5.7 33.1 5 32c-.4-.6-.8-1.3-1.1-2-.3-.7-.5-1.5-.7-2.3-.2-.8-.2-1.6-.2-2.4V9.2l10-6.1V20c0 6.4 4.7 11.8 10.7 13.1-.2.3-.4.6-.7.8-1.1 1.1-2 1.8-3.2 2.3zm17-14c-.1.7-.4 1.4-.6 2-.3.6-.6 1.2-1 1.8-.4.6-1.6 2.1-3.2 3-1.6.9-3.1 1.2-4 1.4.6-1.6 1-3.2 1-5V7.7l8-4.6V20c0 .8 0 1.5-.2 2.2z"/></svg>
+        </div>
+        <div class="certification__right">
+          <h4 class="certification__right-school">Udacity</h4>
+          <h5 class="certification__right-title"><i class="fas fa-code"></i> Front-end Developer Nanodegree</h5>
+          <p class="certification__right-duration">Nov 2020 — Mar 2021</p>
+          <div class="certification__right-separator"></div>
+          <p class="certification__right-description">An intensive training program on front-end web design and application development that teaches the building blocks of the modern web and its main programming languages.</p>
+          <p class="certification__right-technologies">
+            <b>Technologies:</b><br>
+            Website Layout with HTML, CSS and SASS, Javascript and the DOM, Web APIs and Asynchronous Applications, Build Tools, Webpack, and Service Workers.
+          </p>
+          <a href="https://confirm.udacity.com/DNMGJX5N" target="_blank" class="certification__right-btn shadow-xs"><i class="fas fa-award"></i> See Certificate</a>
+        </div>
+      </div>
     </div>
   </section>
   <section id="section-4" class="section-portfolio">
@@ -342,7 +384,7 @@
           <input type="email" name="email" id="email" placeholder="Email" class="contact__right-form__input">
           <textarea name="message" placeholder="Message" id="message" cols="30" rows="10"
             class="contact__right-form__textarea"></textarea>
-          <input type="submit" value="Send Message" class="contact__right-form__btn">
+          <input type="submit" value="Send Message" class="contact__right-form__btn shadow-xs">
         </form>
       </div>
     </div>

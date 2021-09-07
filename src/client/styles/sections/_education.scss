@@ -1,0 +1,107 @@
+.section-education {
+  padding: 10rem 1.5rem 15rem 1.5rem;
+  background-color: var(--color-primary);
+  text-align: center;
+
+  &__container {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  
+  &__heading {
+    margin-bottom: 10rem;
+  }
+
+  &__subheading {
+    margin-bottom: 10rem;
+  }
+
+  .certification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0076d3;
+    padding: 10rem;
+    border-radius: .5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+
+    &:not(:last-child) {
+      margin-bottom: 7.5rem;
+    }
+
+    &__left {
+      width: 20%;
+      align-self: stretch;
+
+      svg {
+        margin-top: 1rem;
+        width: 100%;
+        margin-left: 1rem;
+      }
+    }
+
+    &__right {
+      width: 80%;
+      align-self: stretch;
+      text-align: left;
+
+      &-school {
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+
+      &-title {
+        margin-bottom: .5rem;
+
+        & i {
+          margin-right: .5rem;
+        }
+      }
+
+      &-duration {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
+
+      &-separator {
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 2rem;
+        opacity: .8;
+      }
+
+      &-description {
+        margin-bottom: 2rem;
+      }
+
+      &-technologies {
+        margin-bottom: 2rem;
+      }
+
+      &-btn {
+        color: #fff;
+        transition: all .3s;
+        font-size: 1.8rem;
+        opacity: 1;
+        padding: .7rem 2.1rem;
+        background: #0089f5;
+        border-radius: .5rem;
+
+        & i {
+          margin-right: .5rem;
+        }
+
+        &:hover {
+          color: #0089f5;
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  .container-certifications {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
