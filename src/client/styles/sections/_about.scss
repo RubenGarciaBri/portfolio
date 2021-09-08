@@ -1,5 +1,5 @@
 .section-about {
-  padding: 5rem 1.5rem 0 1.5rem;
+  padding: 5rem 1.5rem 7.5rem 1.5rem;
 
   .about {
     display: flex;
@@ -13,51 +13,84 @@
     }
 
     &__left {
-      width: 40%;  
+      width: 25%;  
       position: relative;
-
-      @include respond(tab-land) {
-        width: 30%;
-      }
+      text-align: left;
 
       @include respond(tab-port) {
-        width: 100%;  
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        order: 2;
+        text-align: center;
       }
 
-      & img {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
 
-        @include respond(tab-land) {
-          width: 120%;
+      & img {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        width: 25rem;
+        border-radius: .5rem;
+
+        @include respond(phone) {
+          margin-bottom: 5rem;
+        }
+      }
+
+      &-skills {
+        text-align: left;
+        opacity: 0.9;
+        
+        &__title {
+          margin-bottom: 1.5rem;
         }
 
-        @include respond(tab-port) {
-          display: none;
+        &__item {
+          padding: .6rem 1.8rem;
+          background: #242728;
+          border-radius: .5rem;
+          font-size: 1.8rem;
+          min-width: 24rem;
+
+          @include respond(tab-port) {
+            display: inline-block;
+          }
+
+          @include respond(phone) {
+            display: block;
+            width: 100%;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+
+            @include respond(tab-port) {
+              margin-right: 1rem;
+            }
+          }
+
+          i {
+            margin-right: 1rem;
+            color: var(--color-primary);
+          }
         }
       }
     }
 
     &__right {
-      width: 60%;
+      width: 75%;
       padding-left: 7.5rem;
       padding-bottom: 7.5rem;
 
-      @include respond(tab-land) {
-        width: 70%;
-      }
-
-      @include respond(hero-image) {
-        padding-bottom: 0;
-      }
-
       @include respond(tab-port) {
         width: 100%;
-        max-width: 75rem;
-        margin: 0 auto;
+        margin: 0 auto 5rem auto;
         padding: 0 2rem;
+        order: 1;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 2.5rem;
       }
 
       &-heading {
@@ -66,24 +99,14 @@
 
       &-text {
         margin-bottom: 2rem;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         opacity: .9;
-      }
 
-    }
-
-    &__mobileImage {
-      display: none;
-
-      @include respond(tab-port) {
-        display: block;
-        margin: 5rem auto 0 auto;
-        width: 35rem;
-        text-align: center;
-      }
-
-      @include respond(phone) {
-        width: 28rem;
+        & span {
+          font-weight: 800;
+          color: var(--color-primary);
+          font-size: 2rem;
+        }
       }
     }
   }

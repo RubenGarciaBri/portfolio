@@ -25,6 +25,7 @@ html {
   }
 
   @include respond(phone) {
+    // font-size: 56.25%;
     font-size: 50%;
   }
 }

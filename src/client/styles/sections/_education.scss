@@ -4,7 +4,7 @@
   text-align: center;
 
   &__container {
-    max-width: 75rem;
+    max-width: 84rem;
     margin: 0 auto;
   }
   
@@ -63,6 +63,7 @@
       }
 
       &-title {
+        font-size: 2.8rem;
         margin-bottom: .5rem;
 
         & i {
@@ -71,7 +72,7 @@
       }
 
       &-duration {
-        font-size: 1.6rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
         opacity: 0.8;
       }
