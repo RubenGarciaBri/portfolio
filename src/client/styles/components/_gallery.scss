@@ -167,7 +167,7 @@
 
 
 .gallery {
-  margin-top: 8rem;
+  margin-top: 5rem;
   width: 100%;
 
   .gallery-row {
@@ -184,7 +184,7 @@
 
     .gallery-card {
       width: 100%;
-      height: 45rem;
+      height: 40rem;
       border-radius: .5rem;
       background: #fff;
       position: relative;
@@ -196,12 +196,15 @@
 
       @include respond(phone) {
         width: 100%;
-        height: 40rem;
       }
 
       &:hover {
         transform: translateY(-10px);
-        transform: scale(1.03);
+        transform: scale(1.05);
+
+        @include respond(tab-land) {
+          transform: scale(1.02);
+        }
       }
      
       a {
@@ -224,6 +227,14 @@
         background-position: left;
         background-size: cover;
         background-repeat: no-repeat;
+
+        &:hover {
+          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 80%),
+          url('../img/gifs/readable.gif');
+          background-position: center top;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
       }
 
       &--2 {
@@ -232,6 +243,14 @@
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
+
+        &:hover {
+          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 80%),
+          url('../img/gifs/wyr.gif');
+          background-position: center top;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
       }
 
       &--3 {
@@ -240,6 +259,14 @@
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
+
+        &:hover {
+          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 80%),
+          url('../img/gifs/contentful-blog.gif');
+          background-position: center top;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
       }
 
       &--4 {
@@ -256,6 +283,23 @@
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
+        
+
+        &:hover {
+          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 80%),
+          url('../img/gifs/flashcards.gif');
+          background-position: center top;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 70%;
+          height: 50rem;
+          margin: 0 7rem;
+
+          @include respond(phone) {
+            width: 100%;
+            height: 60rem;
+          }
+        }
       }
     }
   }

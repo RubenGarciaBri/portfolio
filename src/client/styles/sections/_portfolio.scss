@@ -1,18 +1,15 @@
 .section-portfolio {
-  padding: 10rem 1.5rem;
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 5rem;
+  padding: 10rem 2rem;
+  text-align: center;
 
-    & h2 {
-      margin-bottom: 1.5rem;
-    }
+  .portfolio-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .portfolio-subheading {
+    max-width: 84rem;
+    margin: 0 auto;
+    opacity: .9;
   }
 }
 
-.portfolio-subheading {
-  max-width: 84rem;
-  margin: 0 auto;
-  opacity: .9;
-}
