@@ -26,6 +26,11 @@
   @include respond(tab-port) {
     display: block;
     margin: 5rem auto 10rem auto;
+  }
+
+  @include respond(phone) {
+    display: block;
+    margin: 5rem auto 8rem auto;
    }
 
   &__row {

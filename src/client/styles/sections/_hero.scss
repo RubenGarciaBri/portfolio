@@ -1,6 +1,5 @@
 .hero-section {
-  // height: 65rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   background: linear-gradient(135deg, rgba(17, 17, 17, .80), rgba(17, 17, 17, .9)),
     url('../img/background.png');
   background-position: top;
@@ -14,7 +13,7 @@
   }
 
   @include respond(phone) {
-    padding-bottom: 7.5rem;
+    padding-bottom: 2.5rem;
   }
   
   .hero {
@@ -22,6 +21,11 @@
     align-items: stretch;
     justify-content: flex-start;
     margin-top: 0rem;
+    
+
+    @include respond(big-desktop) {
+      margin-top: 12rem;
+    }
 
     @include respond(tab-land) {
       max-width: 84rem;
@@ -40,9 +44,18 @@
       padding-left: 3rem;
       padding-bottom: 4rem;
 
+      @include respond(big-desktop) {
+        margin-bottom: 12rem;
+      }
+
       @include respond(tab-land) {
+        padding-left: 0;
         width: 100%;
         text-align: center;
+      }
+
+      @include respond(tab-port) {
+        margin-bottom: 2.5rem;
       }
 
       &-heading {
@@ -118,6 +131,7 @@
         width: 50rem;
         margin-bottom: -.7rem;
         margin-right: 3.5rem;
+        opacity: .98;
       }
     }
   }

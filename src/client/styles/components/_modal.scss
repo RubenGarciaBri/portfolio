@@ -117,18 +117,8 @@
   color: var(--color-primary);
 }
 
-.modal__left {
-  width: 35%;
-
-  & img {
-    width: 100%;
-    cursor: pointer;
-  }
-}
-
-.modal__right {
-  width: 100%;
-  padding: 0 10rem 3rem 5rem;
+.modal__wrapper {
+  padding: 0 3.5rem 0 3.5rem;
 
   @include respond(phone) {
     padding: 0;
@@ -136,7 +126,7 @@
 }
 
 .modal__title {
-  margin-top: 2.8rem;
+  margin-top: 3.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -156,7 +146,7 @@
 
 .modal__github {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: .7rem;
 
   i {
     color: #222;

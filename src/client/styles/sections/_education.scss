@@ -1,7 +1,11 @@
 .section-education {
-  padding: 10rem 1.5rem 15rem 1.5rem;
+  padding: 10rem 2rem 15rem 2rem;
   background-color: var(--color-primary);
   text-align: center;
+
+  @include respond(phone) {
+    padding: 8.5rem 2rem 12.5rem 2rem;
+  }
 
   &__container {
     max-width: 84rem;
@@ -25,8 +29,12 @@
     border-radius: .5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);
 
-    @include respond (tab-port) {
+    @include respond(tab-port) {
       padding: 5rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem 2.5rem;
     }
 
     &:not(:last-child) {

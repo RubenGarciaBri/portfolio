@@ -2,6 +2,10 @@
   padding: 10rem 2rem;
   text-align: center;
 
+  @include respond(phone) {
+    padding: 10rem 2rem 7.5rem 2rem;
+  }
+
   .portfolio-heading {
     margin-bottom: 2.5rem;
   }
