@@ -250,10 +250,10 @@
         </div>
         <div class="contact__right">
           <form netlify method="POST" name="contact" class="contact__right-form">
-            <input type="text" name="text" id="text" placeholder="Name" class="contact__right-form__input">
-            <input type="email" name="email" id="email" placeholder="Email" class="contact__right-form__input">
+            <input type="text" name="name" id="name" placeholder="Name" class="contact__right-form__input" required>
+            <input type="email" name="email" id="email" placeholder="Email" class="contact__right-form__input" required>
             <textarea name="message" placeholder="Message" id="message" cols="30" rows="10"
-              class="contact__right-form__textarea"></textarea>
+              class="contact__right-form__textarea" required></textarea>
             <input type="submit" value="Send Message" class="contact__right-form__btn shadow-xs">
           </form>
         </div>
