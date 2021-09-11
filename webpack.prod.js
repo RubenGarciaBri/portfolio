@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -12,7 +12,7 @@ module.exports = {
         filename: 'main.[contentHash].js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'var',
-        library: 'Client'
+        library: 'Client',
     },
     mode: 'production',
     devtool: 'source-map',
@@ -20,9 +20,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: '/.js$/',
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: 'babel-loader',
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
@@ -32,22 +32,22 @@ module.exports = {
                     outputPath: 'img',
                     publicPath: 'img',
                     emitFile: true,
-                    esModule: false
-                }
+                    esModule: false,
+                },
             },
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-            }
-        ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+        ],
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/client/views/index.html",
-            filename: "./index.html",
+            template: './src/client/views/index.html',
+            filename: './index.html',
         }),
         new MiniCssExtractPlugin({
-            filename: "main.css"
+            filename: 'main.css',
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
@@ -56,10 +56,10 @@ module.exports = {
             verbose: true,
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
-        })
+            protectWebpackAssets: false,
+        }),
     ],
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
-    }
-}
+    },
+};
