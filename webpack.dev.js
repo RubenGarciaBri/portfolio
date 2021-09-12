@@ -1,8 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
 
 module.exports = {
     entry: './src/client/index.js',
@@ -10,10 +9,10 @@ module.exports = {
         filename: 'main.[contentHash].js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'var',
-        library: 'Client'
+        library: 'Client',
     },
     devServer: {
-        port: 8082
+        port: 8082,
     },
     mode: 'development',
     devtool: 'source-map',
@@ -21,31 +20,31 @@ module.exports = {
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: '/.js$/',
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: 'babel-loader',
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|webp|gif)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[name][hash6].[ext]',
                     outputPath: 'img',
                     publicPath: 'img',
                     emitFile: true,
-                    esModule: false
-                }
-            }
-        ]
+                    esModule: false,
+                },
+            },
+        ],
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/client/views/index.html",
-            filename: "./index.html",
+            template: './src/client/views/index.html',
+            filename: './index.html',
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
@@ -54,7 +53,7 @@ module.exports = {
             verbose: true,
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
-        })
-    ]
-}
+            protectWebpackAssets: false,
+        }),
+    ],
+};
