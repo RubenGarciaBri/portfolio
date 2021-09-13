@@ -50,6 +50,10 @@ textarea {
 .main-container {
   max-width: 120rem;
   margin: 0 auto;
+
+  @include respond(big-desktop) {
+    max-width: 140rem;
+  }
 }
 
 span {

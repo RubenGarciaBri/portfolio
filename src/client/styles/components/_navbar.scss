@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       display: none;
     }
 
@@ -101,7 +101,7 @@
     margin-bottom: 1rem;
     opacity: .7;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       display: inline-block;
     }
   }
