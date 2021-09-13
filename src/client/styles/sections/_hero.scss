@@ -46,6 +46,7 @@
 
       @include respond(big-desktop) {
         margin-bottom: 12rem;
+        padding-bottom: 0rem;
       }
 
       @include respond(tab-land) {
@@ -132,6 +133,10 @@
         margin-bottom: -.7rem;
         margin-right: 3.5rem;
         opacity: .98;
+
+        @include respond(big-desktop) {
+          width: 55rem;
+        }
       }
     }
   }
