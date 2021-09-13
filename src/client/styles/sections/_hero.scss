@@ -20,11 +20,10 @@
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
-    margin-top: 0rem;
-    
+    margin-top: 0;
 
     @include respond(big-desktop) {
-      margin-top: 12rem;
+      margin-top: 5rem;
     }
 
     @include respond(tab-land) {
@@ -43,11 +42,6 @@
       align-self: center;
       padding-left: 3rem;
       padding-bottom: 4rem;
-
-      @include respond(big-desktop) {
-        margin-bottom: 12rem;
-        padding-bottom: 0rem;
-      }
 
       @include respond(tab-land) {
         padding-left: 0;
@@ -135,7 +129,7 @@
         opacity: .98;
 
         @include respond(big-desktop) {
-          width: 55rem;
+          width: 57rem;
         }
       }
     }
